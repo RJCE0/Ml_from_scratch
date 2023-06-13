@@ -20,12 +20,11 @@ class LinearRegression:
         self.learning_rate = learning_rate
         self.iterations = iterations
         self.weights = None
-        self.bias = None
+        self.bias = 0
     
     def fit(self, X, y):
         n_samples, n_features = X.shape
         self.weights = np.zeros(n_features)
-        self.bias = 0
         
         for _ in range(self.iterations):
             y_hat = np.dot(X, self.weights) + self.bias 
