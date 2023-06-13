@@ -9,7 +9,7 @@ process:
 1. using y = wx+b we will come up with a prediction result, y_hat
 2. Calculate MSE between our predicition y_hat and actual label
 3. Use gradient descent to decide our next weight and bias
-4. Repeat until the gradient change is at some ε threshold to signfiy convergence
+4. Repeat until the gradient change is  < ε threshold, signifying convergence or No. iterations reaches target
 5. Now we will have a y = wx+b equation fit to our training set, and ready for test set
 
 """

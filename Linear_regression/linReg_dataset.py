@@ -2,7 +2,6 @@ import numpy as np
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 import matplotlib.pyplot as plt
-from matplotlib.colors import ListedColormap
 from linReg import LinearRegression
 
 X, y = datasets.make_regression(n_samples=100, n_features=1, noise=20, random_state=4)
