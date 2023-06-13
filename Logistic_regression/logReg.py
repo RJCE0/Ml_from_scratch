@@ -1,6 +1,19 @@
 import numpy as np
 
+"""
+Concept of Simple Linear Regression: 
+A supervised learning algorithm that attempts to estimate the probablity of an observed datapoint
+falling into one-of-two possible categories based on a given dataset of independent variables
 
+process: 
+1. using y =  1 / (1+e^-wx+b) we will come up with a prediction result, y_hat
+2. Calculate Cross Entropy loss between our predicition y_hat and actual label
+3. Use gradient descent to decide our next weight and bias
+4. Repeat until the gradient change is  < ε threshold, signifying convergence or No. iterations reaches target
+5. Now we will have a y =  1 / (1+e^-wx+b) probability equation (along with a probability threshold usually 0.5) 
+   to illustate the predicted label for a new observed datapoint. 
+
+"""
 
 class LogisticRegression:
     
