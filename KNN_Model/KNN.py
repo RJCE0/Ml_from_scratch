@@ -1,6 +1,22 @@
 import numpy as np
 from collections import Counter
 
+"""
+Concept of KNN: 
+The process of k-nearest neighbour algorithm is a non-parametric, 
+(algorithms that don't make strong assumptions about the form of the mapping function), 
+supervised-learning (data is labelled) classifier. It uses the 'distance' to make 
+classifications/predictions about how to predict a label for an individual datapoint
+
+Process: 
+1. Define a k, which is the number of neighbours to check (use odd number to avoid ties)
+2. Define distance metric
+3. Find the closest K datapoints to an individual datapoint
+4. Select the most common label amongst the k neighbours to be the label for a classification task,
+   for a regression task, we can use a weighted average from the k neighbours to predict the new value
+
+"""
+
 def euclidean_distance(x1, x2):
     return np.sqrt(np.sum((x1-x2)**2))
 
@@ -18,7 +34,6 @@ class KNN:
     def fit(self, X, y):
         self.X_train, self.y_train = X, y 
     
-    # Include option to choose which distance algorithm to use
     
     def predict(self, X):
         predictions = [self.prediction(x) for x in X]
