@@ -2,6 +2,25 @@ import numpy as np
 from collections import Counter
 
 
+"""
+Concept of Random Forest: 
+A supervised, tree ensemble that alllows for classification and regression tasks to be carried out.
+Similar to a bagged ensemble but solves the issue of having multiple trees with similar/same 
+root node and subsquent splits   
+
+process: 
+1. Take a random k subset of features to split the dataset on
+2. Calculate information gain with each possible split
+3. Split the set by the feature with the highest information gain
+4. Continue for all subsquent branchs until a stopping criteria is met.
+5. Repeat steps 1-4 for as many decision trees we wish to have in our forest
+6. Now finally we are left with a forest of trees whereby, 
+   given a datapoint x will get the predictions for x from each tree.
+   For a Classification - a majority vote decides the label
+   For a Regression task - We take each tree's predicted value and calculate the mean 
+
+"""
+
 def _most_voted_label(y):
         counter = Counter(y)
         value = counter.most_common(1)[0][0]
