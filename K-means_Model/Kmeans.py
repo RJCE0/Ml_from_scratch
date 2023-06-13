@@ -1,6 +1,17 @@
 import numpy as np
 
+"""
+Concept of K-means:
+This is an unsupervised learning algorithm that separates the data into k clusters.
+Each data sample is assigned to nearest centroids and centroid locations are then 
+updated to the mean of the respective points iteratively
 
+process: 
+1. Initialise the K centroids locations randomly 
+2. Assign points to the nearest centroids
+3. Update the K centroid's location to be the mean of each respective cluster
+4. Repeat until convergence is reached
+"""
 
 def euclidean_distance(x1, x2):
     return np.sqrt(np.sum((x1-x2)**2))
